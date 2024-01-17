@@ -19,10 +19,11 @@ function App() {
         <Route path="/" element={<Header/>} />
         <Route path="/ClassList" element={<ClassList StudentData = { StudentData }/>} />
         <Route path="/StudentList" element={<StudentList StudentData = { StudentData }/>} />
-        <Route path="/AboutPage" element={<StudentList />} />
+        <Route path="/AboutPage" element={<StudentList AboutPage = { AboutPage }/>} />
       </Routes>
     </div>
   );
 }
+// how are we going to get the specific student through the list of students when clicked. while useing
 
 export default App;

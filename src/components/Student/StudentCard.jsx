@@ -21,6 +21,18 @@ function StudentCard() {
 
   const [loadingError, setLoadingError] = useState(false);
 
+  const [messages, setMessages] = useState([]);
+
+  const [message,setMessage] = useState({ 
+    Author: "",
+    text: ""
+  })
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    
+  }
+
   const {
     id:studentId,
     codewars,
@@ -82,6 +94,28 @@ function StudentCard() {
             </ul>
           </div>
           <div className="notes">
+            <h2>1:1 Notes</h2>
+            <div>
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="title">Title:</label>
+              <input
+                type="text"
+                id="title"
+                value={movie.title}
+                onChange={handleTextChange}
+              />
+
+              <label htmlFor="description">Description:</label>
+              <input
+                type="text"
+                id="description"
+                value={movie.description}
+                onChange={handleTextChange}
+              />
+
+              <input type="submit" />
+            </form>
+            </div>
           </div>
         </article>
       </>

@@ -1,42 +1,28 @@
-import { useState , useEffect } from "react"
-
-import { getAllStudents } from "../../api/fetch";
-
-import ErrorMessage from "../Errors/ErrorMessage";
-
-function StudentList() {
-
-    //this will render Students on the page after the filter
-    const [editedStudentList, setEditedStudentList] = useState([]);
-    // this will always be the full set of student data
-    const [allStudentList, setAllStudentList] = useState([]);
-    const [loadingError, setLoadingError] = useState(false);
+import { Link } from "react-router-dom"
 
 
-    useEffect(() => {
-      getAllStudents()
-        .then((data) => {
-          setAllStudentList(data);
-          setEditedStudentList(data);
-          setLoadingError(false);
-        })
-        .catch((error) => {
-          console.error(error);
-          setLoadingError(true);
-        });
-    }, []);
-
+function StudentList({
+  student: {id,names,profilePhoto,dob,username} }) {
   return (
-    <div>
-      {loadingError ? (
-        <ErrorMessage />
-      ) : (
-        <div>
-          Student list
-          {console.log(allStudentList)}
-        </div>
-      )}
-    </div>
+
+    <article className="student">
+      StudentList
+      <img src={profilePhoto} alt="the photo"/>
+      <aside className="details">
+        <p>
+          <span>{names.preferredName} {names.middleName} {names.surname}:</span>
+        </p>
+        <p>
+          <span>{username}</span> 
+        </p>
+        <p>
+          <span> {dob}</span>
+        </p>
+        <p>
+        <Link to={`/movies/${id}`}/>
+        </p>
+      </aside>
+    </article>
   );
 }
 

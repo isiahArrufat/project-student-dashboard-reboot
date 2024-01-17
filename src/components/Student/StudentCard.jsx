@@ -21,16 +21,18 @@ function StudentCard() {
 
   const [loadingError, setLoadingError] = useState(false);
 
-  const [messages, setMessages] = useState([]);
-
-  const [message,setMessage] = useState({ 
-    Author: "",
-    text: ""
-  })
+  const [comments, setComments] = useState([]);
 
   function handleSubmit(event) {
     event.preventDefault();
+    const author = event.target.author.value;
+    const commentText = event.target.comment.value;
     
+    // Adding the new comment to the comments array
+    setComments([...comments, { author, commentText }]);
+    
+    event.target.author.value = '';
+    event.target.comment.value = '';
   }
 
   const {
@@ -95,26 +97,29 @@ function StudentCard() {
           </div>
           <div className="notes">
             <h2>1:1 Notes</h2>
-            <div>
-            <form onSubmit={handleSubmit}>
-              <label htmlFor="title">Title:</label>
-              <input
-                type="text"
-                id="title"
-                value={movie.title}
-                onChange={handleTextChange}
-              />
-
-              <label htmlFor="description">Description:</label>
-              <input
-                type="text"
-                id="description"
-                value={movie.description}
-                onChange={handleTextChange}
-              />
-
-              <input type="submit" />
-            </form>
+            <div className="form">
+              <form onSubmit={handleSubmit}>
+                <input 
+                  type="text" 
+                  name="author" 
+                  placeholder="Author" 
+                  required 
+                /><br />
+                <textarea 
+                  name="comment" 
+                  placeholder="Comment" 
+                  required>
+                </textarea><br />
+                <button type="submit">Submit Comment</button>
+              </form>
+              <div className="comment-section">
+                <h2>Comments</h2>
+                {comments.map((comment, index) => (
+                  <div key={index}>
+                    <strong>{comment.author}</strong>: {comment.commentText}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </article>

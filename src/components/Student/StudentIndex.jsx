@@ -11,6 +11,7 @@ function StudentIndex() {
     const [allStudentList, setAllStudentList] = useState([]);
     const [loadingError, setLoadingError] = useState(false);
 
+
     useEffect(() => {
       getAllStudents()
         .then((data) => {

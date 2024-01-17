@@ -2,13 +2,13 @@ import { Link } from "react-router-dom"
 
 
 function StudentList({
-  student: {id,names,profilePhoto,dob,username} }) {
+  student: {id,names,profilePhoto,dob,username}}) {
   return (
 
     <article className="student">
       StudentList
       <link rel="stylesheet" href="" />
-      <Link to={`/students/${id}`}>
+      <Link to={`/StudentIndex/${id}`}>
         <img src={profilePhoto} alt="the photo"/>
       </Link>
       <aside className="details">

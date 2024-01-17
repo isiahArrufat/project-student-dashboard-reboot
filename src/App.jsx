@@ -17,8 +17,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Header/>} />
         <Route path="/ClassList" element={<ClassList />} />
-        <Route path="/StudentIndex" element={<StudentIndex/>}>
+        <Route path="/StudentIndex">
           {/* Add a route parameter for student id */}
+          <Route index element = {<StudentIndex/>}/>
           <Route path=":id" element={<StudentCard />} />
         </Route>
         <Route path="/AboutPage" element={<AboutPage/>} />

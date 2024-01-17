@@ -7,7 +7,10 @@ function StudentList({
 
     <article className="student">
       StudentList
-      <img src={profilePhoto} alt="the photo"/>
+      <link rel="stylesheet" href="" />
+      <Link to={`/students/${id}`}>
+        <img src={profilePhoto} alt="the photo"/>
+      </Link>
       <aside className="details">
         <p>
           <span>{names.preferredName} {names.middleName} {names.surname}:</span>
@@ -19,7 +22,7 @@ function StudentList({
           <span> {dob}</span>
         </p>
         <p>
-        <Link to={`/movies/${id}`}/>
+        
         </p>
       </aside>
     </article>

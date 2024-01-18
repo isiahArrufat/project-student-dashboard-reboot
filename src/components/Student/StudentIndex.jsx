@@ -3,6 +3,7 @@ import ErrorMessage from '../Errors/ErrorMessage';
 import { getAllStudents } from '../../api/fetch';
 import { useState, useEffect } from 'react';
 import StudentList from './StudentList';
+import ClassList from '../ClassList/ClassList';
 
 function StudentIndex() {
     //this will render Students on the page after the filter
@@ -30,18 +31,23 @@ function StudentIndex() {
       {loadingError ? (
         <ErrorMessage />
       ) : (
+
+        
         <div>
+          <ClassList editedStudentList = {editedStudentList} setEditedStudentList = {setEditedStudentList} allStudentList = {allStudentList}/>
+          <div>
+            
           Student list
           <h1>All Students</h1>
-          <h2>Total students "function goes here" </h2>
+          <h2>Total students: {editedStudentList.length}</h2>
 
-          {console.log(allStudentList)}
         <section className="Student-index">
             {/* <!-- ShowListing components --> */}
             {editedStudentList.map((student) => {
-                return  <StudentList student={student} key={student.id}/>;
+              return  <StudentList student={student} key={student.id}/>;
             })}
         </section>
+          </div>
         </div>
       )}
     </div>

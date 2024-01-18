@@ -1,19 +1,19 @@
-import React from 'react'
 import "./ClassList.css";
 import { Link } from "react-router-dom";
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 
-function ClassList() {
+function ClassList({allStudentList,editedStudentList,setEditedStudentList}) {
   
   const [filter, setFilter] = useState("")
   
-  const cohortFilter = ({allStudentList}) => {
-  
-    const filteredCohorts = allStudentList.filter((student) =>  student.cohort.cohortCode === filter)
-  
-      return filteredCohorts;
-  }
+  const cohortFilter = (students ,filter) => {
+    if (!filter) {
+      return students;
+    }
+    return students.filter((student) => student.cohort.cohortCode === filter);
+  };
+
   
    const namesofCohorts2026 = [
     "Winter 2026",
@@ -40,11 +40,16 @@ function ClassList() {
   const [button, setButton] = useState("Ascending")
 
 const handleChange = () => {
-  button === "Ascending" ? setButton("Desending") : setButton("Ascending");
-  button ===  "Ascending" ? setFullClasses ([...namesofCohorts2025, ...namesofCohorts2026]): setFullClasses([...namesofCohorts2026, ...namesofCohorts2025])
-}
+  setButton((prevButton) => (prevButton === "Ascending" ? "Descending" : "Ascending"));
+  setFullClasses((prevClasses) => (prevButton === "Ascending" ? [...namesofCohorts2025, ...namesofCohorts2026] : [...namesofCohorts2026, ...namesofCohorts2025]));
+};
 
-  
+useEffect(() => {
+  const tempFilter = cohortFilter(allStudentList,filter)
+  setEditedStudentList(tempFilter)
+  console.log(tempFilter)
+},[ filter ]);
+
   return (
     <div>
       <h2> Choose A Class By Start Date </h2>

@@ -1,27 +1,28 @@
-import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 
 // Components
 import Header from "./components/common/Header";
-import ClassList from "./components/ClassList/ClassList";
 import StudentCard from "./components/student/StudentCard";
 import StudentIndex from "./components/Student/StudentIndex";
 import AboutPage from "./components/Common/AboutPage";
 
 
 function App() {
+  const navigate = useNavigate();
+
+  const goToStudentIndex = () => {
+    navigate('/');
+  };
+
   return (
     <div className="wrapper">
-      <Header/>
+      <Header goToStudentIndex={goToStudentIndex}/>
       <Routes>
-        <Route path="/" element={<Header/>} />
-        <Route path="/student-index">
-          {/* Add a route parameter for student id */}
-          <Route index element = {<StudentIndex/>}/>
-          <Route path=":id" element={<StudentCard />} />
-        </Route>
-        <Route path="/about-page" element={<AboutPage/>} />
+        <Route path="/" element={<StudentIndex />} />
+        <Route path="/student-index/:id" element={<StudentCard />} />
+        <Route path="/about-page" element={<AboutPage />} />
       </Routes>
+
     </div>
   );
 }

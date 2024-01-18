@@ -34,8 +34,6 @@ function StudentIndex() {
         <div>
           <ClassList editedStudentList = {editedStudentList} setEditedStudentList = {setEditedStudentList} allStudentList = {allStudentList}/>
           <div>
-            
-          Student list
           <h1>All Students</h1>
           <h2>Total students: {editedStudentList.length}</h2>
 

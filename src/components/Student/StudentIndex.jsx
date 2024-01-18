@@ -39,7 +39,7 @@ function StudentIndex() {
         <section className="Student-index">
             {/* <!-- ShowListing components --> */}
             {editedStudentList.map((student) => {
-                return <StudentList student={student} key={student.id} />;
+                return  <StudentList student={student} key={student.id}/>;
             })}
         </section>
         </div>

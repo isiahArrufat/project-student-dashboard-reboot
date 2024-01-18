@@ -6,10 +6,10 @@ function StudentList({
   return (
 
     <article className="student">
-      StudentList
       <link rel="stylesheet" href="" />
       <Link to={`/StudentIndex/${id}`}>
-        <img src={profilePhoto} alt="the photo"/>
+        <img src={profilePhoto} alt="the photo" />
+        <br />
       </Link>
       <aside className="details">
         <p>

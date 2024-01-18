@@ -1,0 +1,62 @@
+.Progress-notes {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  grid-template-areas: 
+    "student-list grades"
+    "student-list notes"; 
+  gap: 20px;
+  padding: 20px;
+  background-color: white; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  font-family: Arial, sans-serif;
+  max-width: 1200px; 
+  margin: auto;
+}
+.Progress-notes img {
+    border-radius: 50%;
+    width: 250px;
+    padding-left: 8%;
+}
+
+.student{
+  grid-area: student-list;
+  background: white; 
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: center;
+}
+.details {
+    align-items: center;
+    display: flex;
+    padding-left: 10px;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.grades {
+  grid-area: grades; 
+  background-color: white; 
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.notes {
+  grid-area: notes; 
+  background-color: white; 
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}

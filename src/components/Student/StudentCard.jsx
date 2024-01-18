@@ -72,7 +72,7 @@ function StudentCard() {
     {student.id &&
       <>
         <article className="Progress-notes">
-          <StudentList student={student} />
+          <StudentList student={student} className="student-list" />
           <div className="grades">
             <ul>
               <li><h2>Codewars</h2></li>

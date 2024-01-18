@@ -62,7 +62,7 @@ useEffect(() => {
               <li key={className} onClick={() => setFilter(filterSpaces(className))}>{className}</li>
                ))
             }
-            <Link to={`/AboutPage`}>
+            <Link to={`/about-page`}>
             <li key={"About The Developers"} >About The Developers</li>
             </Link>
            </ul>

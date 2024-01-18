@@ -15,13 +15,12 @@ function App() {
       <Header/>
       <Routes>
         <Route path="/" element={<Header/>} />
-        <Route path="/ClassList" element={<ClassList />} />
-        <Route path="/StudentIndex">
+        <Route path="/student-index">
           {/* Add a route parameter for student id */}
           <Route index element = {<StudentIndex/>}/>
           <Route path=":id" element={<StudentCard />} />
         </Route>
-        <Route path="/AboutPage" element={<AboutPage/>} />
+        <Route path="/about-page" element={<AboutPage/>} />
       </Routes>
     </div>
   );

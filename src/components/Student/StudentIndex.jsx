@@ -31,8 +31,6 @@ function StudentIndex() {
       {loadingError ? (
         <ErrorMessage />
       ) : (
-
-        
         <div>
           <ClassList editedStudentList = {editedStudentList} setEditedStudentList = {setEditedStudentList} allStudentList = {allStudentList}/>
           <div>

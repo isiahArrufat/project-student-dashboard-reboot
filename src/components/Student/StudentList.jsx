@@ -7,7 +7,7 @@ function StudentList({
 
     <article className="student">
       <link rel="stylesheet" href="" />
-      <Link to={`/StudentIndex/${id}`}>
+      <Link to={`/student-index/${id}`}>
         <img src={profilePhoto} alt="the photo" />
         <br />
       </Link>

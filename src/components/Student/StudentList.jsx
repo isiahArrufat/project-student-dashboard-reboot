@@ -2,7 +2,14 @@ import { Link } from "react-router-dom"
 
 
 function StudentList({
-  student: {id,names,profilePhoto,dob,username}}) {
+  student: {id,names,profilePhoto,dob,username,certifications}}) {
+
+    function onTrack(resume, linkedin, github, mockInterview) {
+      return resume && linkedin && github && mockInterview ? (
+        <h3 className="on-track">On Track to Graduate</h3>
+      ) : null ;
+    }
+
   return (
 
     <article className="student">
@@ -21,9 +28,10 @@ function StudentList({
         <p>
           <span> {dob}</span>
         </p>
-        <p>
-        
-        </p>
+        {console.log(certifications)}
+        <div className="on-track-wrapper">
+          {onTrack(certifications.resume, certifications.linkedin, certifications.github, certifications.mockInterview)}
+        </div>
       </aside>
     </article>
   );

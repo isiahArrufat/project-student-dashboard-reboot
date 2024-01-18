@@ -9,6 +9,12 @@ function StudentList({
         <h3 className="on-track">On Track to Graduate</h3>
       ) : null ;
     }
+    function convertToNamedDate(dob) {
+      const date = new Date(dob);
+      const namedDate = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      return namedDate;
+    }
+    
 
   return (
 
@@ -26,9 +32,8 @@ function StudentList({
           <span>{username}</span> 
         </p>
         <p>
-          <span> {dob}</span>
+          <span> {convertToNamedDate(dob)}</span>
         </p>
-        {console.log(certifications)}
         <div className="on-track-wrapper">
           {onTrack(certifications.resume, certifications.linkedin, certifications.github, certifications.mockInterview)}
         </div>

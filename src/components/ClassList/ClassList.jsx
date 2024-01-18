@@ -40,8 +40,8 @@ function ClassList({allStudentList,editedStudentList,setEditedStudentList}) {
   const [button, setButton] = useState("Ascending")
 
 const handleChange = () => {
-  setButton((prevButton) => (prevButton === "Ascending" ? "Descending" : "Ascending"));
-  setFullClasses((prevClasses) => (prevButton === "Ascending" ? [...namesofCohorts2025, ...namesofCohorts2026] : [...namesofCohorts2026, ...namesofCohorts2025]));
+  setButton((e) => (e === "Ascending" ? "Descending" : "Ascending"));
+  setFullClasses(() => (button === "Ascending" ? [...namesofCohorts2025, ...namesofCohorts2026] : [...namesofCohorts2026, ...namesofCohorts2025]));
 };
 
 useEffect(() => {

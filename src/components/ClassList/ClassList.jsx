@@ -46,11 +46,20 @@ const handleChange = () => {
   
   return (
     <div>
-     <h2> Choose A Class By Start Date </h2>
-      <button onClick={handleChange()}> Sort {button} By Year </button>
-      {
-        
-      }
+      <h2> Choose A Class By Start Date </h2>
+         <button onClick={handleChange()}> Sort {button} By Year </button>
+           <ul>
+           <li key={"All Students"} onClick={() => setFilter("")}>All Students</li>
+            {
+
+              fullClasses.map((className) => (
+              <li key={className} onClick={() => setFilter(filterSpaces(className))}>{className}</li>
+               ))
+            };
+            <Link to={`/AboutPage`}>
+            <li key={"About The Developers"} >About The Developers</li>
+            </Link>
+           </ul>
    </div>
    )
 }

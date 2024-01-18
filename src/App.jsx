@@ -5,7 +5,6 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./components/common/Header";
 import ClassList from "./components/ClassList/ClassList";
 import StudentCard from "./components/student/StudentCard";
-import StudentList from "./components/student/StudentList";
 import StudentIndex from "./components/Student/StudentIndex";
 import AboutPage from "./components/Common/AboutPage";
 

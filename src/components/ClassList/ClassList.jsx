@@ -3,17 +3,18 @@ import "./ClassList.css";
 import { Link } from "react-router-dom";
 import { useState } from 'react';
 
-const [filter, setFilter] = useState("")
-
-const cohortFilter = ({allStudentList,}) => {
-
-  const filteredCohorts = allStudentList.filter((student) =>  student.cohort.cohortCode === filter)
-
-    return filteredCohorts;
-}
 
 function ClassList() {
-
+  
+  const [filter, setFilter] = useState("")
+  
+  const cohortFilter = ({allStudentList}) => {
+  
+    const filteredCohorts = allStudentList.filter((student) =>  student.cohort.cohortCode === filter)
+  
+      return filteredCohorts;
+  }
+  
    const namesofCohorts2026 = [
     "Winter 2026",
     "Spring 2026",
@@ -29,7 +30,7 @@ function ClassList() {
     "Fall 2025",
    ]
 
-   const [fullClasses, setFullClasses] = useState([ namesofCohorts2025,  namesofCohorts2026 ])
+   const [fullClasses, setFullClasses] = useState([ ...namesofCohorts2025,  ...namesofCohorts2026 ])
 
 
   function filterSpaces(inputString) {
@@ -47,7 +48,7 @@ const handleChange = () => {
   return (
     <div>
       <h2> Choose A Class By Start Date </h2>
-         <button onClick={handleChange()}> Sort {button} By Year </button>
+         <button onClick={handleChange}> Sort {button} By Year </button>
            <ul>
            <li key={"All Students"} onClick={() => setFilter("")}>All Students</li>
             {
@@ -55,7 +56,7 @@ const handleChange = () => {
               fullClasses.map((className) => (
               <li key={className} onClick={() => setFilter(filterSpaces(className))}>{className}</li>
                ))
-            };
+            }
             <Link to={`/AboutPage`}>
             <li key={"About The Developers"} >About The Developers</li>
             </Link>

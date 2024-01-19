@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { useState,useEffect } from 'react';
 
 
-function ClassList({allStudentList,editedStudentList,setEditedStudentList}) {
+function ClassList({allStudentList,editedStudentList,setEditedStudentList, filter, setFilter}) {
   
-  const [filter, setFilter] = useState("")
+
   
   const cohortFilter = (students ,filter) => {
     if (!filter) {

@@ -12,6 +12,7 @@ function StudentIndex() {
     const [allStudentList, setAllStudentList] = useState([]);
     const [loadingError, setLoadingError] = useState(false);
 
+    const [filter, setFilter] = useState("")
 
     useEffect(() => {
       getAllStudents()
@@ -32,9 +33,10 @@ function StudentIndex() {
         <ErrorMessage />
       ) : (
         <div>
-          <ClassList editedStudentList = {editedStudentList} setEditedStudentList = {setEditedStudentList} allStudentList = {allStudentList}/>
+          <ClassList editedStudentList = {editedStudentList} setEditedStudentList = {setEditedStudentList} 
+          allStudentList = {allStudentList} filter= {filter} setFilter = {setFilter}/>
           <div>
-          <h1>All Students</h1>
+          <h1>All Students {}</h1>
           <h2>Total students: {editedStudentList.length}</h2>
 
         <section className="Student-index">

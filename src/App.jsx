@@ -2,7 +2,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 // Components
-import Header from "./components/common/Header";
+import Header from "src/components/common/Header";
 import StudentCard from "./components/Student/StudentCard";
 import StudentIndex from "./components/Student/StudentIndex";
 import AboutPage from "./components/Common/AboutPage";

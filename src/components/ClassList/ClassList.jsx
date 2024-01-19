@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useState,useEffect } from 'react';
 
 
-function ClassList({allStudentList,editedStudentList,setEditedStudentList, filter, setFilter , setFilterName}) {
+function ClassList({allStudentList,editedStudentList,setEditedStudentList, filter, setFilter , setFilterName,goToStudentIndex}) {
   
 
   
@@ -54,11 +54,11 @@ useEffect(() => {
       <h2> Choose A Class By Start Date </h2>
          <button onClick={handleChange}> Sort {button} By Year </button>
            <ul>
-           <li key={"All Students"} onClick={() => setFilter("")}>All Students</li>
+           <li key={"All Students"} onClick={() => (setFilter(""),setFilterName(""),goToStudentIndex())}>All Students</li>
             {
 
               fullClasses.map((className) => (
-              <li key={className} onClick={() => (setFilter(filterSpaces(className)), setFilterName(className))}>{className}</li>
+              <li key={className} onClick={() => (setFilter(filterSpaces(className)), setFilterName(className),goToStudentIndex())}>{className}</li>
                ))
             }
             <Link to={`/about-page`}>

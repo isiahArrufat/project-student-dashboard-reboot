@@ -9,16 +9,19 @@ function StudentIndex({editedStudentList,setEditedStudentList,setAllStudentList 
     const [loadingError, setLoadingError] = useState(false);
 
     useEffect(() => {
-      getAllStudents()
+      if(editedStudentList.length===0){
+        getAllStudents()
         .then((data) => {
           setAllStudentList(data);
-          setEditedStudentList(data);
-          setLoadingError(false);
-        })
-        .catch((error) => {
-          console.error(error);
-          setLoadingError(true);
-        });
+          
+              setEditedStudentList(data);
+              setLoadingError(false);
+            })
+            .catch((error) => {
+              console.error(error);
+              setLoadingError(true);
+            });
+      }
     }, []);
 
   return (

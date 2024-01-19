@@ -27,7 +27,7 @@ function App() {
       <Header goToStudentIndex={goToStudentIndex}/>
       <ClassList editedStudentList = {editedStudentList} setEditedStudentList = {setEditedStudentList} 
           allStudentList = {allStudentList} filter= {filter} setFilter = {setFilter} 
-          setFilterName = {setFilterName}/>
+          setFilterName = {setFilterName} goToStudentIndex ={goToStudentIndex}/>
       <Routes>
         <Route path="/" element={<StudentIndex 
         editedStudentList = {editedStudentList} setEditedStudentList = {setEditedStudentList}

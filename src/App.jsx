@@ -3,7 +3,7 @@ import { useState } from "react";
 
 // Components
 import Header from "./components/common/Header";
-import StudentCard from "./components/student/StudentCard";
+import StudentCard from "./components/Student/StudentCard";
 import StudentIndex from "./components/Student/StudentIndex";
 import AboutPage from "./components/Common/AboutPage";
 import ClassList from "./components/ClassList/ClassList";

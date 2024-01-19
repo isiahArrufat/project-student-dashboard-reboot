@@ -4,7 +4,7 @@ import { Link, useParams, useNavigate } from "react-router-dom"
 import { getAllStudents} from "../../api/fetch"
 import StudentList from "./StudentList"
 
-import ErrorMessage from "../Errors/ErrorMessage"
+import ErrorMessage2 from "../Errors/ErrorMessage2"
 
 import "./StudentCard.css"
 
@@ -59,7 +59,7 @@ function StudentCard() {
         if (Object.keys(studentData).length === 0) {
           setLoadingError(true);
         } else {
-          setLoadingError(false);
+          setLoadingError(true);
         }
       })
       .catch((error) => {
@@ -70,7 +70,7 @@ function StudentCard() {
   return (
     <div>
       {loadingError ? (
-        <ErrorMessage />
+        <ErrorMessage2 />
       ) : (
         <div>
           {student.id && (

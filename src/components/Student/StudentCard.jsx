@@ -69,65 +69,70 @@ function StudentCard() {
 
   return (
     <div>
-    {student.id &&
-      <>
-        <article className="Progress-notes">
-          <StudentList student={student} className="student-list" />
-          <div className="grades">
-            <ul>
-              <li><h2>Codewars</h2></li>
-              <li>Current Total:{codewars.current.total}</li>
-              <li>Last Week: {codewars.current.lastWeek}</li>
-              <li>Goal: {codewars.goal.total}</li>
-              <li>Percent of Goal Achieved: {percentOfGoal}%</li>
-            </ul>
-            <ul>
-              <li><h2>Scores</h2></li>
-              <li>Assignments: {cohort.scores.assignments * 100}%</li>
-              <li>Projects: {cohort.scores.projects * 100}%</li>
-              <li>Assessments: {cohort.scores.assessments * 100}%</li>
-            </ul>
-            <ul>
-              <li><h2>Certifications</h2></li>
-              <li>Resume: {iconMap[certifications.resume]}</li>
-              <li>LinkedIn: {iconMap[certifications.linkedin]}</li>
-              <li>Mock Interview: {iconMap[certifications.mockInterview]}</li>
-              <li>GitHub: {iconMap[certifications.github]}</li>
-            </ul>
-          </div>
-          <div className="notes">
-            <h2>1:1 Notes</h2>
-            <div className="form">
-              <form onSubmit={handleSubmit}>
-                <input 
-                  type="text" 
-                  name="author" 
-                  placeholder="Author" 
-                  required 
-                /><br />
-                <textarea 
-                  name="comment" 
-                  placeholder="Comment" 
-                  required>
-                </textarea><br />
-                <button type="submit">Submit Comment</button>
-              </form>
-              <div className="comment-section">
-                <h2>Comments</h2>
-                {comments.map((comment, index) => (
-                  <div key={index}>
-                    <strong>{comment.author}</strong>: {comment.commentText}
+      {loadingError ? (
+        <ErrorMessage />
+      ) : (
+        <div>
+          {student.id && (
+            <>
+              <article className="Progress-notes">
+                <StudentList student={student} className="student-list" />
+                <div className="grades">
+                  <ul>
+                    <li><h2>Codewars</h2></li>
+                    <li>Current Total:{codewars.current.total}</li>
+                    <li>Last Week: {codewars.current.lastWeek}</li>
+                    <li>Goal: {codewars.goal.total}</li>
+                    <li>Percent of Goal Achieved: {percentOfGoal}%</li>
+                  </ul>
+                  <ul>
+                    <li><h2>Scores</h2></li>
+                    <li>Assignments: {cohort.scores.assignments * 100}%</li>
+                    <li>Projects: {cohort.scores.projects * 100}%</li>
+                    <li>Assessments: {cohort.scores.assessments * 100}%</li>
+                  </ul>
+                  <ul>
+                    <li><h2>Certifications</h2></li>
+                    <li>Resume: {iconMap[certifications.resume]}</li>
+                    <li>LinkedIn: {iconMap[certifications.linkedin]}</li>
+                    <li>Mock Interview: {iconMap[certifications.mockInterview]}</li>
+                    <li>GitHub: {iconMap[certifications.github]}</li>
+                  </ul>
+                </div>
+                <div className="notes">
+                  <h2>1:1 Notes</h2>
+                  <div className="form">
+                    <form onSubmit={handleSubmit}>
+                      <input 
+                        type="text" 
+                        name="author" 
+                        placeholder="Author" 
+                        required 
+                      /><br />
+                      <textarea 
+                        name="comment" 
+                        placeholder="Comment" 
+                        required>
+                      </textarea><br />
+                      <button type="submit">Submit Comment</button>
+                    </form>
+                    <div className="comment-section">
+                      <h2>Comments</h2>
+                      {comments.map((comment, index) => (
+                        <div key={index}>
+                          <strong>{comment.author}</strong>: {comment.commentText}
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </article>
-      </>
-    }
-    
+                </div>
+              </article>
+            </>
+          )}
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
 export default StudentCard

@@ -24,7 +24,7 @@ function AboutPage() {
       <div>
       <h2>Isiah Arrufat</h2>
         <img src="/img/IsiahArrufat.jpeg" alt="Isiah Arrufat's picture" /><br />
-        <p>Description</p>
+        <p>Hello My Name is Isiah Arrufat I'm  34 year old Software Engineer from Harlem, NY. I first started coding in High School then i took a break from it, However in 2019 I decided to get back into web development and stared going to a bootcamp Named PerScholas. I joined two internship's since graduating in 2020, but they was the right fit for me and I also felt I needed more training to really be employable, so in 2023 that's when I Joined pursuit after seeing a flyer in my mailbox. I knew this was a sign for me to put best effort into achieving my dream in working as A Software Engineer.</p>
         <a href="https://github.com/IsiahArrufat" target='_blank'>GitHub Link</a>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { Link, useParams, useNavigate } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 import { getAllStudents} from "../../api/fetch"
 import StudentList from "./StudentList"
@@ -10,7 +10,6 @@ import "./StudentCard.css"
 
 function StudentCard() {
   const { id } = useParams();
-  const navigate = useNavigate();
 
   const [student, setStudent] = useState({
     id: "",
@@ -55,7 +54,6 @@ function StudentCard() {
       .then((data) => {
         const studentData = data.find((student)=>student.id === id)
         setStudent(studentData);
-        console.log(studentData);
         if (Object.keys(studentData).length === 0) {
           setLoadingError(true);
         } else {

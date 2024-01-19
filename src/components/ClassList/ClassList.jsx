@@ -20,7 +20,6 @@ function ClassList({allStudentList,editedStudentList,setEditedStudentList}) {
     "Spring 2026",
     "Summer 2026",
     "Fall 2026",
-
    ]
 
    const namesofCohorts2025 = [

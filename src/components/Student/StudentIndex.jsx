@@ -3,16 +3,10 @@ import ErrorMessage from '../Errors/ErrorMessage';
 import { getAllStudents } from '../../api/fetch';
 import { useState, useEffect } from 'react';
 import StudentList from './StudentList';
-import ClassList from '../ClassList/ClassList';
 
-function StudentIndex() {
-    //this will render Students on the page after the filter
-    const [editedStudentList, setEditedStudentList] = useState([]);
-    // this will always be the full set of student data
-    const [allStudentList, setAllStudentList] = useState([]);
+function StudentIndex({editedStudentList,setEditedStudentList,setAllStudentList , filterName}) {
+
     const [loadingError, setLoadingError] = useState(false);
-
-    const [filter, setFilter] = useState("")
 
     useEffect(() => {
       getAllStudents()
@@ -33,10 +27,8 @@ function StudentIndex() {
         <ErrorMessage />
       ) : (
         <div>
-          <ClassList editedStudentList = {editedStudentList} setEditedStudentList = {setEditedStudentList} 
-          allStudentList = {allStudentList} filter= {filter} setFilter = {setFilter}/>
           <div>
-          <h1>All Students {}</h1>
+          <h1>{filterName ? filterName:"All"} Students</h1>
           <h2>Total students: {editedStudentList.length}</h2>
 
         <section className="Student-index">

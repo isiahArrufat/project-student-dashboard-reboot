@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useState,useEffect } from 'react';
 
 
-function ClassList({allStudentList,editedStudentList,setEditedStudentList, filter, setFilter}) {
+function ClassList({allStudentList,editedStudentList,setEditedStudentList, filter, setFilter , setFilterName}) {
   
 
   
@@ -58,7 +58,7 @@ useEffect(() => {
             {
 
               fullClasses.map((className) => (
-              <li key={className} onClick={() => setFilter(filterSpaces(className))}>{className}</li>
+              <li key={className} onClick={() => (setFilter(filterSpaces(className)), setFilterName(className))}>{className}</li>
                ))
             }
             <Link to={`/about-page`}>

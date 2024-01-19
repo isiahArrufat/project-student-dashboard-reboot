@@ -59,7 +59,7 @@ function StudentCard() {
         if (Object.keys(studentData).length === 0) {
           setLoadingError(true);
         } else {
-          setLoadingError(true);
+          setLoadingError(false);
         }
       })
       .catch((error) => {

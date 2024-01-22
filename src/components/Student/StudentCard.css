@@ -1,9 +1,9 @@
 .Progress-notes {
   display: grid;
-  grid-template-columns: 1fr; /* Only one column */
+  grid-template-columns: 1fr; 
   grid-template-areas: 
     "student-list"
-    "grades-notes"; /* Combined grid area for grades and notes */
+    "grades-notes"; 
   gap: 20px;
   padding-left: 20px;
   background-color: white;
@@ -44,9 +44,9 @@
 }
 
 .grades-notes {
-  grid-area: grades-notes; /* Assign the combined area to grades and notes */
+  grid-area: grades-notes; 
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns for grades and notes */
+  grid-template-columns: 1fr 1fr; 
   gap: 20px;
 }
 

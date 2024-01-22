@@ -14,9 +14,9 @@
   margin: auto;
 }
 .Progress-notes img {
-    border-radius: 50%;
-    width: 250px;
-    padding-left: 8%;
+  border-radius: 50%;
+  width: 250px;
+  padding-left: 8%;
 }
 
 .student{
@@ -27,13 +27,13 @@
   justify-content: center;
 }
 .details {
-    align-items: center;
-    display: flex;
-    padding-left: 10px;
-    justify-content: center;
-    align-content: space-between;
-    flex-wrap: nowrap;
-    flex-direction: column;
+  align-items: center;
+  display: flex;
+  padding-left: 10px;
+  justify-content: center;
+  align-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
 .grades {

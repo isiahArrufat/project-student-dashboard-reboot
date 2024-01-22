@@ -62,7 +62,7 @@ useEffect(() => {
                ))
             }
             <Link to={`/about-page`}>
-            <li key={"About The Developers"} >About The Developers</li>
+            <li key={"About The Developers"} className="devs">About The Developers</li>
             </Link>
            </ul>
    </div>

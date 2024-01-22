@@ -7,6 +7,7 @@ import StudentCard from "./components/Student/StudentCard";
 import StudentIndex from "./components/Student/StudentIndex";
 import AboutPage from "./components/Common/AboutPage";
 import ClassList from "./components/ClassList/ClassList";
+import "./App.css"
 
 
 function App() {
@@ -24,22 +25,24 @@ function App() {
 
   return (
     <div className="wrapper">
-      <Header goToStudentIndex={goToStudentIndex}/>
-      <ClassList editedStudentList = {editedStudentList} setEditedStudentList = {setEditedStudentList} 
-          allStudentList = {allStudentList} filter= {filter} setFilter = {setFilter} 
-          setFilterName = {setFilterName} goToStudentIndex ={goToStudentIndex}/>
+      <Header className="header" goToStudentIndex={goToStudentIndex}/>
+      <div className="classlist-container">
+        <ClassList className="classlist" editedStudentList={editedStudentList} setEditedStudentList={setEditedStudentList} 
+          allStudentList={allStudentList} filter={filter} setFilter={setFilter} 
+          setFilterName={setFilterName} goToStudentIndex={goToStudentIndex}/>
+    <div className="content">
       <Routes>
         <Route path="/" element={<StudentIndex 
-        editedStudentList = {editedStudentList} setEditedStudentList = {setEditedStudentList}
+        editedStudentList={editedStudentList} setEditedStudentList={setEditedStudentList}
         setAllStudentList={setAllStudentList} 
-        filterName = {filterName}/>} />
+        filterName={filterName}/>} />
         <Route path="/student-index/:id" element={<StudentCard />} />
         <Route path="/about-page" element={<AboutPage />} />
-      </Routes>
-
-    </div>
+    </Routes>
+        </div>
+  </div>
+</div>
   );
 }
-// how are we going to get the specific student through the list of students when clicked. while useing
 
 export default App;

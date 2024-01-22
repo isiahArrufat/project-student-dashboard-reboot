@@ -1,0 +1,19 @@
+.header {
+    width: 100%;
+}
+.classlist-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+body {
+    background-color: var(--coral);
+}
+  
+:root {
+    --arylide-yellow: #e9d758ff;
+    --myrtle-green: #297373ff;
+    --coral: #ff8552ff;
+    --platinum: #e6e6e6ff;
+    --jet: #39393aff;
+}

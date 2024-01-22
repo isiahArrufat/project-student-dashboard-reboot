@@ -42,14 +42,14 @@ ul {
 li {
     padding: 8px 16px;
     border-bottom: 1px solid var(--jet);
+}
+
+.classlist li:hover {
+    background-color: lightgray;
     cursor: pointer;
 }
   
-li:hover {
-    background-color: lightgray;
-}
-  
-li:last-child {
+.classlist li:last-child {
     border-bottom: none;
 }
   
@@ -61,4 +61,16 @@ a {
 a li:hover {
     background-color: lightgray
 }
-  
+
+.devs {
+    /* font-style: italic; */
+    font-weight: bold;
+    color: var(--platinum);
+    font-size: 16px;
+    /* -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black; */
+}
+
+.devs:hover{
+    background-color: var(--myrtle-green);
+}

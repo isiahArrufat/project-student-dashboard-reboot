@@ -1,10 +1,9 @@
 .Student-index {
     width: 90%;
+    height: 75vh;
+    overflow-y: scroll;
 }
-/* .index-container {
-    align-items: center;
-    margin-left: 10%
-} */
+
 
 .all-index-content {
     align-items: center;

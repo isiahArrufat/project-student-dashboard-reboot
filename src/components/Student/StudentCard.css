@@ -12,6 +12,9 @@
   font-family: Arial, sans-serif;
   max-width: 1200px;
   margin: auto;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
 }
 
 .student {
@@ -45,4 +48,30 @@
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two columns for grades and notes */
   gap: 20px;
+}
+
+textarea,
+input,
+.form button {
+  width: 220px;
+}
+
+input {
+  margin-bottom: 5px;
+}
+
+
+
+.grades h2,
+.notes h2 {
+  color: var(--jet);
+}
+
+
+:root {
+  --arylide-yellow: #e9d758ff;
+  --myrtle-green: #297373ff;
+  --coral: #ff8552ff;
+  --platinum: #e6e6e6ff;
+  --jet: #39393aff;
 }

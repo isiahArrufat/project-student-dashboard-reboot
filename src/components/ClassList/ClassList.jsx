@@ -50,7 +50,7 @@ useEffect(() => {
 },[ filter ]);
 
   return (
-    <div>
+    <div className="classlist">
       <h2> Choose A Class By Start Date </h2>
          <button onClick={handleChange}> Sort {button} By Year </button>
            <ul>

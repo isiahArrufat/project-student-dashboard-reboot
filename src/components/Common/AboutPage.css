@@ -49,6 +49,10 @@ h1 {
     text-align: center;
 }
 
+p {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
 
 .developers h2 {
     color: var(--myrtle-green);

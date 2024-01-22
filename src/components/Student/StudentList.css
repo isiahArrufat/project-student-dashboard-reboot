@@ -8,4 +8,14 @@ article {
         "img details"
         ". details";
     margin-bottom: 2%;
+    align-items: center;
+}
+
+img {
+    grid-area: img;
+}
+
+.details {
+    grid-area: details;
+    padding-left: 5%;
 }

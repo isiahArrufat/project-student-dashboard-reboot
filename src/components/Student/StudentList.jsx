@@ -19,15 +19,14 @@ function StudentList({
 
   return (
 
+      <Link to={`/student-index/${id}`}>
     <article className="student">
       <link rel="stylesheet" href="" />
-      <Link to={`/student-index/${id}`}>
         <img src={profilePhoto} alt="the photo" />
         <br />
-      </Link>
       <aside className="details">
         <p>
-          <span>{names.preferredName} {names.middleName} {names.surname}:</span>
+          <span>{names.preferredName} {names.middleName} {names.surname}</span>
         </p>
         <p>
           <span>{username}</span> 
@@ -40,6 +39,7 @@ function StudentList({
         </div>
       </aside>
     </article>
+      </Link>
   );
 }
 

@@ -75,6 +75,8 @@ function StudentCard() {
             <>
               <article className="Progress-notes">
                 <StudentList student={student} className="student-list" />
+                <div className="grades-notes">
+
                 <div className="grades">
                   <ul>
                     <li><h2>Codewars</h2></li>
@@ -106,7 +108,7 @@ function StudentCard() {
                         name="author" 
                         placeholder="Author" 
                         required 
-                      /><br />
+                        /><br />
                       <textarea 
                         name="comment" 
                         placeholder="Comment" 
@@ -122,6 +124,7 @@ function StudentCard() {
                         </div>
                       ))}
                     </div>
+                      </div>
                   </div>
                 </div>
               </article>

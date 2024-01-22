@@ -57,8 +57,8 @@ useEffect(() => {
            <li key={"All Students"} onClick={() => (setFilter(""),setFilterName(""),goToStudentIndex())}>All Students</li>
             {
 
-              fullClasses.map((className) => (
-              <li key={className} onClick={() => (setFilter(filterSpaces(className)), setFilterName(className),goToStudentIndex())}>{className}</li>
+              fullClasses.map((cohortName) => (
+              <li key={cohortName} className={filterSpaces(cohortName)} onClick={() => (setFilter(filterSpaces(cohortName)), setFilterName(cohortName),goToStudentIndex())}>{cohortName}</li>
                ))
             }
             <Link to={`/about-page`}>

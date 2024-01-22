@@ -3,7 +3,7 @@ import "./StudentList.css"
 
 
 function StudentList({
-  student: {id,names,profilePhoto,dob,username,certifications}}) {
+  student: {id,names,profilePhoto,dob,username,certifications,cohort}}) {
 
     function onTrack(resume, linkedin, github, mockInterview) {
       return resume && linkedin && github && mockInterview ? (
@@ -20,7 +20,7 @@ function StudentList({
   return (
 
       <Link to={`/student-index/${id}`}>
-    <article className="student">
+    <article className={`student ${cohort.cohortCode}` }>
       <link rel="stylesheet" href="" />
         <img src={profilePhoto} alt="the photo" />
         <br />

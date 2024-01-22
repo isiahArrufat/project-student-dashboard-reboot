@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useState,useEffect } from 'react';
 
 
-function ClassList({allStudentList,editedStudentList,setEditedStudentList, filter, setFilter , setFilterName,goToStudentIndex}) {
+function ClassList({allStudentList, setEditedStudentList, filter, setFilter , setFilterName,goToStudentIndex}) {
   
 
   

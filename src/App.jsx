@@ -27,7 +27,7 @@ function App() {
     <div className="wrapper">
       <Header className="header" goToStudentIndex={goToStudentIndex}/>
       <div className="classlist-container">
-        <ClassList className="classlist" editedStudentList={editedStudentList} setEditedStudentList={setEditedStudentList} 
+        <ClassList className="classlist" setEditedStudentList={setEditedStudentList} 
           allStudentList={allStudentList} filter={filter} setFilter={setFilter} 
           setFilterName={setFilterName} goToStudentIndex={goToStudentIndex}/>
     <div className="content">

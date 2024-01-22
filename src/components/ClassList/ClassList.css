@@ -1,21 +1,14 @@
 :root {
-    --arylide-yellow: #e9d758ff;
     --myrtle-green: #297373ff;
     --coral: #ff8552ff;
-    --tropical-indigo: #9c95dcff;
-    --tufts-blue: #228cdbff;
-    --cerulean: #0b7189ff;
-    --mint-green: #daffefff;
-    --platinum: #e6e6e6ff;
-    --jet: #39393aff;
-    --yale-blue: #0d3b66ff;
-    --lemon-chiffon: #faf0caff;
-    --sandy-brown: #ee964bff;
-    --cambridge-blue: #9ebc9eff;
-    --tea-rose-red: #ffcfd2ff;
+    --arylide-yellow: #e9d758ff;
     --cherry-blossom-pink: #ffafc5ff;
     --eggplant: #553e4eff;
+    --tufts-blue: #228cdbff;
+    --jet: #39393aff;
     --hollywood-cerise: #e0479eff;
+    --lemon-chiffon: #faf0caff;
+    --platinum: #e6e6e6ff;
 }
 
 body {
@@ -25,7 +18,7 @@ body {
 h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: var(--platinum);
+    color: white;
 }
   
 button {

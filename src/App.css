@@ -5,7 +5,9 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
-
+.content{
+    align-items: center;
+}
 body {
     background-color: var(--coral);
 }

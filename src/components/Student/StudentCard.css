@@ -67,6 +67,14 @@ input {
   color: var(--jet);
 }
 
+.comment{
+  padding: 8px;
+  border-bottom: .5px dashed gray;
+}
+
+.comment:last-child{
+  border-bottom: none;
+}
 
 :root {
   --arylide-yellow: #e9d758ff;

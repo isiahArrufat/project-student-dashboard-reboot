@@ -119,7 +119,7 @@ function StudentCard() {
                     <div className="comment-section">
                       <h2>Comments</h2>
                       {comments.map((comment, index) => (
-                        <div key={index}>
+                        <div className="comment" key={index}>
                           <strong>{comment.author}</strong>: {comment.commentText}
                         </div>
                       ))}

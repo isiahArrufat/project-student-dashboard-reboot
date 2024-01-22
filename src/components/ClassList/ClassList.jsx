@@ -54,7 +54,7 @@ useEffect(() => {
       <h2> Choose A Class By Start Date </h2>
          <button onClick={handleChange}> Sort {button} By Year </button>
            <ul>
-           <li key={"All Students"} onClick={() => (setFilter(""),setFilterName(""),goToStudentIndex())}>All Students</li>
+           <li className="all-students" key={"All Students"} onClick={() => (setFilter(""),setFilterName(""),goToStudentIndex())}>All Students</li>
             {
 
               fullClasses.map((cohortName) => (

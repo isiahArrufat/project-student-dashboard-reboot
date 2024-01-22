@@ -2,8 +2,20 @@
     --arylide-yellow: #e9d758ff;
     --myrtle-green: #297373ff;
     --coral: #ff8552ff;
+    --tropical-indigo: #9c95dcff;
+    --tufts-blue: #228cdbff;
+    --cerulean: #0b7189ff;
+    --mint-green: #daffefff;
     --platinum: #e6e6e6ff;
     --jet: #39393aff;
+    --yale-blue: #0d3b66ff;
+    --lemon-chiffon: #faf0caff;
+    --sandy-brown: #ee964bff;
+    --cambridge-blue: #9ebc9eff;
+    --tea-rose-red: #ffcfd2ff;
+    --cherry-blossom-pink: #ffafc5ff;
+    --eggplant: #553e4eff;
+    --hollywood-cerise: #e0479eff;
 }
 
 body {
@@ -44,33 +56,67 @@ li {
     border-bottom: 1px solid var(--jet);
 }
 
-.classlist li:hover {
-    background-color: lightgray;
-    cursor: pointer;
-}
-  
+
 .classlist li:last-child {
     border-bottom: none;
 }
-  
+.classlist li:hover {
+    cursor: pointer;
+}
+
 a {
     text-decoration: none;
     color: inherit; 
 }
-  
-a li:hover {
-    background-color: lightgray
-}
+
 
 .devs {
-    /* font-style: italic; */
     font-weight: bold;
     color: var(--platinum);
     font-size: 16px;
-    /* -webkit-text-stroke-width: .5px;
-    -webkit-text-stroke-color: black; */
 }
 
 .devs:hover{
     background-color: var(--myrtle-green);
+    cursor: pointer;
+}
+
+.all-students:hover {
+    background-color: lightgray;
+}
+
+.Winter2025:hover {
+    background-color: var(--myrtle-green);
+    color: var(--platinum);
+}
+
+.Spring2025:hover {
+    background-color: var(--arylide-yellow);
+}
+
+.Summer2025:hover {
+    background-color: var(--cherry-blossom-pink);
+}
+
+.Fall2025:hover {
+    background-color: maroon;
+    color: white;
+}
+
+.Winter2026:hover {
+    background-color: var(--tufts-blue);
+}
+
+.Spring2026:hover{
+    background-color: var(--lemon-chiffon);
+}
+
+.Summer2026:hover{
+    background-color: var(--hollywood-cerise);
+    color: white;
+}
+
+.Fall2026:hover{
+    background-color: var(--eggplant);
+    color: var(--platinum);
 }

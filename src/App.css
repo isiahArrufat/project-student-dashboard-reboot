@@ -20,7 +20,7 @@ body {
     --jet: #39393aff;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 780px){
     .classlist-container {
         grid-template-columns: 1fr;
     }

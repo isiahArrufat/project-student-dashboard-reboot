@@ -46,7 +46,6 @@ const handleChange = () => {
 useEffect(() => {
   const tempFilter = cohortFilter(allStudentList,filter)
   setEditedStudentList(tempFilter)
-  console.log(tempFilter)
 },[ filter ]);
 
   return (

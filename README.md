@@ -10,7 +10,15 @@ Welcome to the React Student Dashboard, a dynamic and user-friendly application 
 - **Responsive Design**: User-friendly and responsive design for optimal viewing across different devices.
 - **Error Handling**: Robust error handling for a smoother user experience.
 
-## Application Structure
+## Live Application (no installation required)
+- Link to our live application: [Student Dashboard App](https://main--aesthetic-kataifi-62cd51.netlify.app/)
+
+## Installation (to run locally)
+
+1. **Clone Repository**: Clone the project repository to your local machine.
+2. **Install Dependencies**: In the project directory, use `npm install` to install required dependencies.
+3. **Environment Variables**: Set up the necessary environment variables, including the API URL in `.env`.
+4. **Start Application**: Run `npm start` to start the application. It will be available at `localhost:3000`.
 
 ### Components
 - `StudentCard.jsx`: Displays detailed information for a specific student.
@@ -22,16 +30,6 @@ Welcome to the React Student Dashboard, a dynamic and user-friendly application 
 
 ### API Integration
 - `fetch.js`: Contains functions for API calls to retrieve student data. Utilizes `URL` from the application's environment variables for API endpoints.
-
-## Live Application (no installation required)
-- Link to our live application: [Student Dashboard App](https://main--aesthetic-kataifi-62cd51.netlify.app/)
-
-## Installation (to run locally)
-
-1. **Clone Repository**: Clone the project repository to your local machine.
-2. **Install Dependencies**: In the project directory, use `npm install` to install required dependencies.
-3. **Environment Variables**: Set up the necessary environment variables, including the API URL in `.env`.
-4. **Start Application**: Run `npm start` to start the application. It will be available at `localhost:3000`.
 
 ## Usage Instructions
 
@@ -47,9 +45,8 @@ Welcome to the React Student Dashboard, a dynamic and user-friendly application 
 - Render to deploy our backend server.
 - Netlify to deploy our application.
 
-## Contributors
+## Developers
 
-Contributions are welcome. To contribute contact one of our developers:
 1. [Michael Restrepoross](https://github.com/MichaelARestrepoross)
 2. [Isiah Arrufat](https://github.com/IsiahArrufat)
 3. [Christopher Miranda](https://github.com/ChrisCodeTrials)

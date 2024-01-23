@@ -19,3 +19,9 @@ body {
     --platinum: #e6e6e6ff;
     --jet: #39393aff;
 }
+
+@media screen and (max-width: 800px){
+    .classlist-container {
+        grid-template-columns: 1fr;
+    }
+}

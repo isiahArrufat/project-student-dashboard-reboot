@@ -20,8 +20,9 @@ body {
     --jet: #39393aff;
 }
 
-@media screen and (max-width: 780px){
+@media screen and (max-device-width: 480px){
     .classlist-container {
         grid-template-columns: 1fr;
     }
+    
 }

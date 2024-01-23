@@ -113,3 +113,9 @@ a {
     background-color: var(--eggplant);
     color: var(--platinum);
 }
+
+@media screen and (max-device-width: 480px){
+    .classlist li {
+        font-size: large;
+    }
+  }

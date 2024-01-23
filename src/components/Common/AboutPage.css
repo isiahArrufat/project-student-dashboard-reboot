@@ -58,3 +58,13 @@ p {
     color: var(--myrtle-green);
 }
 
+@media screen and (max-device-width: 480px){
+    .developers {
+        grid-template-columns: 1fr;
+    }
+    .content{
+        font-size: large;
+    }
+
+
+}

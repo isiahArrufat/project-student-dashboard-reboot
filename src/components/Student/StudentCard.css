@@ -84,7 +84,7 @@ input {
   --jet: #39393aff;
 }
 
-@media screen and (max-width: 780px){
+@media screen and (max-device-width: 480px){
   .grades-notes {
       grid-template-columns: 1fr;
   }

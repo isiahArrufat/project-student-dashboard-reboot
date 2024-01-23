@@ -45,6 +45,11 @@ Welcome to the React Student Dashboard, a dynamic and user-friendly application 
 - Render to deploy our backend server.
 - Netlify to deploy our application.
 
+## Stretch goals 
+
+- Implemented error handling with a message for mismatched IDs when filtering for specific students.
+- Add color-coding or segmentation to the cohort list and students cards based on cohort, so that each year is visually distinct from one another when hovering.
+
 ## Developers
 
 1. [Michael Restrepoross](https://github.com/MichaelARestrepoross)

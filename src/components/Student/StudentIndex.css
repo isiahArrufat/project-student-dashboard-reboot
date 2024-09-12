@@ -1,0 +1,16 @@
+.Student-index {
+    width: 90%;
+    height: 75vh;
+    overflow-y: scroll;
+}
+.all-index-content {
+    align-items: center;
+    margin-left: 10% 
+}
+
+.all-index-content h1 {
+    color: white;
+}
+.all-index-content h2 {
+    color: white;
+}
